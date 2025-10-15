@@ -79,5 +79,23 @@ public class SistemKelulusan {
             statusSemester = "TIDAK LULUS (Ada mata kuliah tidak lulus)";
         }
 
+         // ===== OUTPUT HASIL =====
+        System.out.println("\n===== HASIL PENILAIAN AKADEMIK =====");
+        System.out.println("Nama : " + nama);
+        System.out.println("NIM  : " + nim);
+        System.out.println("-------------------------------------------------------------");
+        System.out.printf("%-25s %-6s %-6s %-6s %-10s %-8s %-12s\n", 
+                          "Mata Kuliah", "UTS", "UAS", "Tugas", "Akhir", "Huruf", "Status");
+        System.out.println("-------------------------------------------------------------");
+        System.out.printf("%-25s %-6.0f %-6.0f %-6.0f %-10.2f %-8s %-12s\n", 
+                          "Algoritma Pemrograman", uts1, uas1, tugas1, akhir1, huruf1, status1);
+        System.out.printf("%-25s %-6.0f %-6.0f %-6.0f %-10.2f %-8s %-12s\n", 
+                          "Struktur Data", uts2, uas2, tugas2, akhir2, huruf2, status2);
+        System.out.println("-------------------------------------------------------------");
+        System.out.printf("Rata-rata Nilai Akhir: %.2f\n", rata);
+        System.out.println("Status Semester: " + statusSemester);
+    }
+}
+
 
 
