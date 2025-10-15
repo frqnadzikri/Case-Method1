@@ -37,7 +37,7 @@ public class SistemKelulusan {
         String huruf2 = "";
         String status1 = "";
         String status2 = "";
-        
+
         // ===== KONVERSI NILAI HURUF DAN STATUS MATA KULIAH 1 =====
         if (akhir1 >= 80 && akhir1 <= 100) huruf1 = "A";
         else if (akhir1 >= 73) huruf1 = "B+";
@@ -65,3 +65,19 @@ public class SistemKelulusan {
             status2 = "LULUS";
         else
             status2 = "TIDAK LULUS";
+
+             // ===== NESTED IF UNTUK STATUS SEMESTER =====
+        double rata = (akhir1 + akhir2) / 2;
+        String statusSemester = "";
+
+        if (status1.equals("LULUS") && status2.equals("LULUS")) {
+            if (rata >= 70)
+                statusSemester = "LULUS";
+            else
+                statusSemester = "TIDAK LULUS (Rata-rata < 70)";
+        } else {
+            statusSemester = "TIDAK LULUS (Ada mata kuliah tidak lulus)";
+        }
+
+
+
