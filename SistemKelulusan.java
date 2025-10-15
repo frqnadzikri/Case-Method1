@@ -28,3 +28,12 @@ public class SistemKelulusan {
         double uas2 = sc.nextDouble();
         System.out.print("Nilai Tugas : ");
         double tugas2 = sc.nextDouble();
+        
+        // ===== PERHITUNGAN NILAI AKHIR =====
+        double akhir1 = (uts1 * 0.3) + (uas1 * 0.4) + (tugas1 * 0.3);
+        double akhir2 = (uts2 * 0.3) + (uas2 * 0.4) + (tugas2 * 0.3);
+
+        String huruf1 = "";
+        String huruf2 = "";
+        String status1 = "";
+        String status2 = "";
